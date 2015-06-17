@@ -61,6 +61,7 @@ set scrolloff=6
 set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
+set noshowmode
 
 syntax on
 " IR_Black color scheme
