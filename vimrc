@@ -52,6 +52,9 @@ set noerrorbells
 set ruler
 set linebreak
 set backspace=indent,eol,start
+set hidden
+set confirm
+set showcmd
 
 syntax on
 " IR_Black color scheme
