@@ -51,12 +51,14 @@ set laststatus=2
 set noerrorbells
 set ruler
 set linebreak
+set display=lastline
 set backspace=indent,eol,start
 set hidden
 set confirm
 set showcmd
 set wildmode=longest,list
 set wildmenu
+set pastetoggle=<F2>
 
 syntax on
 " IR_Black color scheme
