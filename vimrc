@@ -83,6 +83,7 @@ let g:jedi#popup_select_first = 0
 let g:jedi#completions_command = ",,"
 
 " vim-airline
-let g:airline_theme='murmur'
+let g:airline_theme='powerlineish'
+let g:airline_powerline_fonts = 1
 
 " ~/.vimrc ends here
