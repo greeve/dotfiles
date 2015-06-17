@@ -12,6 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 " Custom plugins
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
+Plugin 'bling/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -79,5 +80,8 @@ let g:pymode_run_bind = '<leader>p'
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
 let g:jedi#completions_command = ",,"
+
+" vim-airline
+let g:airline_theme='bubblegum'
 
 " ~/.vimrc ends here
