@@ -57,6 +57,7 @@ set backspace=indent,eol,start
 set hidden
 set confirm
 set showcmd
+set scrolloff=6
 set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
@@ -82,6 +83,6 @@ let g:jedi#popup_select_first = 0
 let g:jedi#completions_command = ",,"
 
 " vim-airline
-let g:airline_theme='bubblegum'
+let g:airline_theme='murmur'
 
 " ~/.vimrc ends here
