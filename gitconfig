@@ -1,0 +1,7 @@
+[push]
+	default = simple
+[user]
+	name = greeve
+	email = greg_reeve@byu.edu
+[alias]
+    lol = log --pretty=oneline --abbrev-commit --graph --decorate --all
