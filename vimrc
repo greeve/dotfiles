@@ -61,12 +61,20 @@ set scrolloff=6
 set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
-set noshowmode
+set noshowmode 
+set background=dark
 
 syntax on
+
 " IR_Black color scheme
 " http://toddwerth.com/2008/04/30/the-last-vim-color-scheme-youll-ever-need/
 :colorscheme ir_black
+
+" :colorscheme jellybeans
+
+" vim-hybrid
+" https://github.com/w0ng/vim-hybrid
+" :colorscheme hybrid
 
 " Plugin configurations
 
