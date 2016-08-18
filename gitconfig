@@ -5,3 +5,7 @@
 	email = greg_reeve@byu.edu
 [alias]
     lol = log --pretty=oneline --abbrev-commit --graph --decorate --all
+[commit]
+    template = ~/.gitmessage
+[core]
+	editor = /usr/bin/vim
