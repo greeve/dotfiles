@@ -13,6 +13,8 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -66,6 +68,13 @@ set background=dark
 
 syntax on
 
+" Silver Searcher config
+if executable('ag')
+    " Note we extract the column as well as the file and line number
+    set grepprg=ag\ --nogroup\ --nocolor\ --column
+    set grepformat=%f:%l:%c%m
+endif
+
 " IR_Black color scheme
 " http://toddwerth.com/2008/04/30/the-last-vim-color-scheme-youll-ever-need/
 :colorscheme ir_black
@@ -84,6 +93,7 @@ let g:pymode_doc_bind = 'K'
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
 let g:pymode_breakpoint_bind = '<leader>b'
 let g:pymode_folding = 0
+let g:pymode_lint_on_fly = 0
 let g:pymode_run_bind = '<leader>p'
 
 " jedi-vim
@@ -94,5 +104,12 @@ let g:jedi#completions_command = ",,"
 " vim-airline
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
+
+" ctrlp.vim
+let g:ctrlp_by_filename = 0
+let g:ctrlp_working_path_mode = 0
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
+let g:ctrlp_custom_ignore = '\vnode_modules'
+" map <c-b> :CtrlPBuffer<cr>
 
 " ~/.vimrc ends here
