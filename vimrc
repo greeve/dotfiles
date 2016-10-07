@@ -64,7 +64,7 @@ set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
 set noshowmode 
-set background=dark
+" set background=dark
 
 syntax on
 
@@ -75,15 +75,57 @@ if executable('ag')
     set grepformat=%f:%l:%c%m
 endif
 
-" IR_Black color scheme
-" http://toddwerth.com/2008/04/30/the-last-vim-color-scheme-youll-ever-need/
-:colorscheme ir_black
+" Color schemes
 
-" :colorscheme jellybeans
+" argonaut
+" https://github.com/effkay/argonaut.vim
+" :colorscheme argonaut
+
+" blackboard
+" https://github.com/ratazzi/blackboard.vim
+" :colorscheme blackboard
+
+" C64
+" https://github.com/vim-scripts/C64.vim
+" :colorscheme C64
+
+" colorsbox
+" https://github.com/mkarmona/colorsbox
+" :colorscheme colorsbox-faff
+" :colorscheme colorsbox-greenish
+" :colorscheme colorsbox-material
+" :colorscheme colorsbox-stblue
+" :colorscheme colorsbox-stbright
+" :colorscheme colorsbox-steighties
+" :colorscheme colorsbox-stnight
+
+" github
+" https://github.com/acarapetis/vim-colors-github
+" :colorscheme github
+
+" IR_Black
+" https://github.com/twerth/ir_black
+" :colorscheme ir_black
+" :colorscheme ir_blue
+" :colorscheme ir_dark
+
+" simple_dark
+" https://github.com/acoustichero/simple_dark
+" :colorscheme simple_dark
 
 " vim-hybrid
 " https://github.com/w0ng/vim-hybrid
 " :colorscheme hybrid
+
+" woju
+" https://github.com/woju/vim-colors-woju
+" :colorscheme woju
+
+" wwdc16
+" https://github.com/lifepillar/vim-wwdc16-theme
+:colorscheme wwdc16
+let g:wwdc16_term_italics = 1
+let g:wwdc16_term_trans_bg = 1
 
 " Plugin configurations
 
@@ -104,6 +146,9 @@ let g:jedi#completions_command = ",,"
 " vim-airline
 let g:airline_theme='powerlineish'
 let g:airline_powerline_fonts = 1
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
+let g:airline_detect_spell=1
 
 " ctrlp.vim
 let g:ctrlp_by_filename = 0
