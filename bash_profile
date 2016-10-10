@@ -27,6 +27,10 @@ pyenv virtualenvwrapper_lazy
 
 export PATH="/usr/local/mysql/bin:$PATH"
 
+alias dj="python manage.py"
+alias shell="python manage.py shell_plus"
+alias server="python manage.py runserver_plus"
+
 pyclean () {
     find . -type f -name "*.py[co]" -delete
     find . -type d -name "__pycache__" -delete
