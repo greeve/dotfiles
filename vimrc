@@ -12,9 +12,11 @@ Plugin 'gmarik/Vundle.vim'
 " Custom plugins
 Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+" Plugin 'bling/vim-airline'
+" Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -37,6 +39,7 @@ nmap <leader>l :set list!<CR>
 
 " Set :W to :w
 cabbrev W w
+cabbrev Wq wq
 
 " Tabs 
 set encoding=utf-8
@@ -45,28 +48,33 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 
+set backspace=indent,eol,start
+set autoindent
+set ruler
+set laststatus=2
+" set display=lastline
+" set showcmd
+if &t_Co > 2 || has("gui_running")
+    " Switch on syntax highlighting and search match highlighting 
+    " if colors are available
+    syntax on
+    set hlsearch
+endif
+set incsearch
 set number
 set cursorline
-set hlsearch
-set incsearch
-set title
-set laststatus=2
+" set title
 set noerrorbells
-set ruler
 set linebreak
-set display=lastline
-set backspace=indent,eol,start
 set hidden
 set confirm
-set showcmd
 set scrolloff=6
 set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
-set noshowmode 
+" set noshowmode 
 " set background=dark
 
-syntax on
 
 " Silver Searcher config
 if executable('ag')
@@ -144,11 +152,9 @@ let g:jedi#popup_select_first = 0
 let g:jedi#completions_command = ",,"
 
 " vim-airline
-let g:airline_theme='powerlineish'
-let g:airline_powerline_fonts = 1
-" let g:airline_left_sep=''
-" let g:airline_right_sep=''
-let g:airline_detect_spell=1
+" let g:airline_theme='powerlineish'
+" let g:airline_powerline_fonts = 1
+" let g:airline_detect_spell=1
 
 " ctrlp.vim
 let g:ctrlp_by_filename = 0
