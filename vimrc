@@ -1,7 +1,7 @@
 " Greg's .vimrc
 set nocompatible
-
 filetype off
+
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -15,8 +15,10 @@ Plugin 'klen/python-mode'
 " Plugin 'bling/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -25,15 +27,16 @@ filetype plugin indent on
 " Mappings
 au! BufNewFile,BufRead *.text  set filetype=markdown
 au! BufNewFile,BufRead *.md  set filetype=markdown
+au! BufNewFile,BufRead *.js  set filetype=javascript
 
-noremap <Up> ""
-noremap! <Up> <Esc>
-noremap <Down> ""
-noremap! <Down> <Esc>
-noremap <Left> ""
-noremap! <Left> <Esc>
-noremap <Right> ""
-noremap! <Right> <Esc>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+" set foldmethod=indent
+set foldlevel=2
+nnoremap <space> zA
 
 nmap <leader>l :set list!<CR>
 
@@ -41,8 +44,10 @@ nmap <leader>l :set list!<CR>
 cabbrev W w
 cabbrev Wq wq
 
-" Tabs 
 set encoding=utf-8
+set fileencoding=utf-8
+
+" Tabs 
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -141,9 +146,11 @@ let g:wwdc16_term_trans_bg = 1
 let g:pymode_rope = 0
 let g:pymode_doc_bind = 'K'
 let g:pymode_lint_checkers = ['pyflakes', 'pep8']
-let g:pymode_breakpoint_bind = '<leader>b'
 let g:pymode_folding = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_unmodified = 1
 let g:pymode_lint_on_fly = 0
+let g:pymode_lint_cwindow = 0
 let g:pymode_run_bind = '<leader>p'
 
 " jedi-vim
@@ -162,5 +169,9 @@ let g:ctrlp_working_path_mode = 0
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip 
 let g:ctrlp_custom_ignore = '\vnode_modules'
 " map <c-b> :CtrlPBuffer<cr>
+
+" SimplylFold
+let g:SimpylFold_fold_import = 0
+let g:SimpylFold_fold_docstring = 0
 
 " ~/.vimrc ends here
