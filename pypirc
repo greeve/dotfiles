@@ -1,0 +1,8 @@
+[distutils]
+index-servers = 
+    hbll
+
+[hbll]
+repository=https://pypi.lib.byu.edu
+username=hbll
+password=HB11
