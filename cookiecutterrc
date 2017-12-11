@@ -1,0 +1,9 @@
+default_context:
+  admin_name: "Greg Reeve"
+  admin_email: "greg_reeve@byu.edu"
+  author_name: "Greg Reeve"
+  author_email: "greg_reeve@byu.edu"
+abbreviations:
+  hbll-django: git@bitbucket.org:byuhbll/django-project-template.git
+  hbll-django-setup: git@bitbucket.org:byuhbll/django-project-setup.git
+  hbll-python: git@bitbucket.org:byuhbll/python-project-template.git
