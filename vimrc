@@ -10,33 +10,42 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Custom plugins
-Plugin 'davidhalter/jedi-vim'
-Plugin 'klen/python-mode'
+" Plugin 'davidhalter/jedi-vim'
+" Plugin 'klen/python-mode'
 " Plugin 'bling/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'tmhedberg/SimpylFold'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'w0rp/ale'
+" Plugin 'dracula/vim', { 'as': 'dracula' }
+Plugin 'cespare/vim-toml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
+
 filetype plugin indent on
 
 " Mappings
-au! BufNewFile,BufRead *.text  set filetype=markdown
-au! BufNewFile,BufRead *.md  set filetype=markdown
-au! BufNewFile,BufRead *.js  set filetype=javascript
+au! BufNewFile,BufRead *.text set filetype=markdown
+au! BufNewFile,BufRead *.md set filetype=markdown
+au! BufNewFile,BufRead *.js set filetype=javascript
+au! BufNewFile,BufRead *.yml set filetype=yaml
+au! BufNewFile,BufRead *.rdf set filetype=xml
+
+au FileType yaml setl sw=2 sts=2 et
 
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+inoremap <S-Tab> <C-V><Tab>
 
 " set foldmethod=indent
-set foldlevel=2
-nnoremap <space> zA
+" set foldlevel=2
+" nnoremap <space> zA
 
 nmap <leader>l :set list!<CR>
 
@@ -78,8 +87,7 @@ set wildmode=longest,list
 set wildmenu
 set pastetoggle=<F2>
 " set noshowmode 
-" set background=dark
-
+set background=dark
 
 " Silver Searcher config
 if executable('ag')
@@ -140,23 +148,30 @@ endif
 let g:wwdc16_term_italics = 1
 let g:wwdc16_term_trans_bg = 1
 
+" wwdc17
+" https://github.com/lifepillar/vim-wwdc17-theme
+" :colorscheme wwdc17
+" let g:wwdc17_term_italics = 1
+" let g:wwdc17_term_trans_bg = 1
+
 " Plugin configurations
 
 " python-mode
-let g:pymode_rope = 0
-let g:pymode_doc_bind = 'K'
-let g:pymode_lint_checkers = ['pyflakes', 'pep8']
-let g:pymode_folding = 0
-let g:pymode_lint_on_write = 0
-let g:pymode_lint_unmodified = 1
-let g:pymode_lint_on_fly = 0
-let g:pymode_lint_cwindow = 0
-let g:pymode_run_bind = '<leader>p'
+" let g:pymode_python = 'python3'
+" let g:pymode_rope = 0
+" let g:pymode_doc_bind = 'K'
+" let g:pymode_lint_checkers = ['pyflakes', 'pep8']
+" let g:pymode_folding = 0
+" let g:pymode_lint_on_write = 0
+" let g:pymode_lint_unmodified = 1
+" let g:pymode_lint_on_fly = 0
+" let g:pymode_lint_cwindow = 0
+" let g:pymode_run_bind = '<leader>p'
 
 " jedi-vim
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-let g:jedi#completions_command = ",,"
+" let g:jedi#popup_on_dot = 0
+" let g:jedi#popup_select_first = 0
+" let g:jedi#completions_command = ",,"
 
 " vim-airline
 " let g:airline_theme='powerlineish'
@@ -173,5 +188,19 @@ let g:ctrlp_custom_ignore = '\vnode_modules'
 " SimplylFold
 let g:SimpylFold_fold_import = 0
 let g:SimpylFold_fold_docstring = 0
+
+" Ale
+let g:ale_python_pylint_executable=''
+let g:ale_python_mypy_executable=''
+let g:ale_file_enter = 1
+let g:ale_set_highlights = 0
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+
+" Dracula
+" let g:dracula_bold = 0
+" let g:dracula_italic = 0
+" let g:dracula_colorterm = 0
+" :colorscheme dracula
 
 " ~/.vimrc ends here
