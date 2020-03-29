@@ -11,7 +11,7 @@ Plugin 'gmarik/Vundle.vim'
 
 " Custom plugins
 " Plugin 'davidhalter/jedi-vim'
-" Plugin 'klen/python-mode'
+Plugin 'klen/python-mode'
 " Plugin 'bling/vim-airline'
 " Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -22,6 +22,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'w0rp/ale'
 " Plugin 'dracula/vim', { 'as': 'dracula' }
 Plugin 'cespare/vim-toml'
+Plugin 'vimoutliner/vimoutliner'
 
 " All of your Plugins must be added before the following line
 call vundle#end()
@@ -157,16 +158,16 @@ let g:wwdc16_term_trans_bg = 1
 " Plugin configurations
 
 " python-mode
-" let g:pymode_python = 'python3'
-" let g:pymode_rope = 0
-" let g:pymode_doc_bind = 'K'
-" let g:pymode_lint_checkers = ['pyflakes', 'pep8']
-" let g:pymode_folding = 0
-" let g:pymode_lint_on_write = 0
-" let g:pymode_lint_unmodified = 1
-" let g:pymode_lint_on_fly = 0
-" let g:pymode_lint_cwindow = 0
-" let g:pymode_run_bind = '<leader>p'
+let g:pymode_python = 'python3'
+let g:pymode_rope = 0
+let g:pymode_doc_bind = 'K'
+let g:pymode_lint_checkers = ['pyflakes', 'pep8']
+let g:pymode_folding = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_unmodified = 1
+let g:pymode_lint_on_fly = 0
+let g:pymode_lint_cwindow = 0
+let g:pymode_run_bind = '<leader>p'
 
 " jedi-vim
 " let g:jedi#popup_on_dot = 0
