@@ -1,7 +1,11 @@
+# set -x
+
 LC_CTYPE=en_US.UTF-8
 export LC_CTYPE
 export CLICOLOR=1
-export PS1='\u:\W\$ '
+export PS1='%n:%F{003}%1~%f %# '
+# bash prompt
+# export PS1='\u:\W\ $ '
 export HOMEBREW_NO_EMOJI=1
 
 alias l='ls -lahG'
@@ -31,6 +35,17 @@ export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Development
+
+export NVM_LAZY_LOAD=true
+
+# Load antigen
+source /usr/local/share/antigen/antigen.zsh
+
+antigen bundle lukechilds/zsh-nvm
+
+# Tell antigen its over
+antigen apply
+
 
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
@@ -78,8 +93,10 @@ headphones () {
     sudo pkill coreaudiod
 }
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export JAVA_HOME=`/usr/libexec/java_home`
+
+# set +x
